@@ -15,3 +15,6 @@
 ### GIVEN that there are options when I select a song
 ### WHEN I select a song
 ### THEN I am presented with a side by side view of lyrics and tablature notiation
+
+API:s 
+Songster API and Genius API
