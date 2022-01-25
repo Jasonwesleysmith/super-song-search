@@ -18,3 +18,6 @@
 
 API:s 
 Songster API and Genius API
+
+## Wireframing
+![Wireframe Screenshot](song-search-wireframe.png)
