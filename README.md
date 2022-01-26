@@ -21,3 +21,13 @@ Songster API and Genius API
 
 ## Wireframing
 ![Wireframe Screenshot](song-search-wireframe.png)
+
+
+1/25/2022 temporary issue outline:
+Create initial html/css/js files
+Create the header and footer
+Place search and select options in header
+Create modal for search options
+Append song information into two separate columns (tabs and lyrics)
+
+
