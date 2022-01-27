@@ -20,7 +20,7 @@ API:s
 Songster API and Genius API
 
 ## Wireframing
-![Wireframe Screenshot](song-search-wireframe.png)
+![Wireframe Screenshot](https://raw.githubusercontent.com/Jasonwesleysmith/super-song-search/main/assets/images/song-search-wireframe.png)
 
 
 1/25/2022 temporary issue outline:
