@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Super Song Search</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+</header>
+<body>
+    <!--Jumbotron for Title-->
+    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+        <h1> <strong>Super Song Search</strong></h1>
+    </div>
+    <div class="container">
+        <!--Row for searching songs-->
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <!--Here we create an HTML form for handling the inputs-->
+                <h4 class="pt-1"><strong>Search a song:</strong></h4>
+                <!--Here we create the text box for capturing the search song Name-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"id="search-song" aria-label="song search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!--section for search song history-->
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>        
+    </div>        
+</body>        
+    
+        <footer class="mt-5 p-3 text-center bg-light">
+			Super Song Search &copy 2022  Made with 🔥 by 
+			<a href="" target="blank"> </a>
+			
+        </footer>
+
+        <!--jQuery JS-->
+        <script src=""></script>
+        <script src=""></script>
+        <!--Code to Jvascript File-->
+        <script src=""></script>
+
+</html>		
