@@ -18,6 +18,18 @@
     height: 100%;
   }
   
+  h1 {
+    font-family: sans-serif;
+    color: #999;
+    font-size: 96px;
+  }
+
+  h4 {
+    font-family: sans-serif;
+    color: #999;
+    font-size: 48px;
+  }
+
   /* head */
   .header {
     background-color: rgb(0, 0, 0);
@@ -41,4 +53,9 @@
     background-color: rgb(61, 61, 61);
     padding: 1em;
     display: flex;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
   }
