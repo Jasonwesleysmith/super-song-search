@@ -22,6 +22,7 @@
     border: 1.5px solid white;
     border-radius: 10px;
     text-align: center;
+    
   }
 
   #instrument {
@@ -35,11 +36,10 @@
   
   #search-song {
     margin: 30px;
-    width: 1400px;
     height: 50px;
     border-radius: 10px;
-    float: right;
-    
+    float: right; 
+    width: 1400px;
   }
 
   .left {
@@ -94,7 +94,6 @@
   /* main */
   main {
     display: inline-block;
-    background-color: var(--pink);
     color: #fff;
     width: 100%;
   }
