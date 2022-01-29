@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,46 +8,57 @@
     <!--Bootstrap CSS CDN-->
     <link rel="stylesheet" href="" />
     <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-</header>
-<body>
+
+</head>
+<main>
+    <header>
     <!--Jumbotron for Title-->
-    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+    <div class="jumbotron container-fluid mt-2 text-center p-2">
         <h1> <strong>Super Song Search</strong></h1>
     </div>
+    </header>
+<body>    
     <div class="container">
         <!--Row for searching songs-->
         <div class="row">
-            <div class="col-sm-4 bg-light">
-                <!--Here we create an HTML form for handling the inputs-->
+            <!--Here we create an HTML form for handling the inputs-->
+            <form class="col-sm-4 bg-light" id="search-form">
                 <h4 class="pt-1"><strong>Search a song:</strong></h4>
                 <!--Here we create the text box for capturing the search song Name-->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control"id="search-song" aria-label="song search" aria-describedby="search-button">
+                    <input type="text" class="form-input" id="search-song" aria-label="song search" aria-describedby="search-button">
                     <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                        <button class=" btn bg-primary text-light" id="search-button">Search<i class="fa fa-search"></i></button>
                     </div>
                 </div>
-                <!--section for search song history-->
+            </form>
+                <!--section for search song options-->
                 <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-                <ul class="list-group">
-                </ul>
-            </div>
-        </div>        
+
+        </div>  
+        <ul class="list-group" id="results">
+
+        </ul>
+        <container id="lyric-con">
+
+        </container>
+    
+          
     </div>        
 </body>        
-    
+</main>    
         <footer class="mt-5 p-3 text-center bg-light">
-			Super Song Search &copy 2022  Made with 🔥 by 
+			Super Song Search &copy 2022  Made with 🔥 by J. D. A.
 			<a href="" target="blank"> </a>
 			
         </footer>
 
         <!--jQuery JS-->
-        <script src=""></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src=""></script>
         <!--Code to Jvascript File-->
-        <script src=""></script>
+        <script src="./assets/script.js"></script>
 
 </html>		
