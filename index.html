@@ -10,16 +10,26 @@
     <!-- Font Awesome CSS Icons (For cool glyphicons) -->
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="">
-
+    
 </head>
-<main>
-    <header>
-    <!--Jumbotron for Title-->
-    <div class="jumbotron container-fluid mt-2 text-center p-2">
-        <h1> <strong>Super Song Search</strong></h1>
-    </div>
-    </header>
+
+
 <body>    
+    <!--Row for searching songs-->
+
+<main class="row mt-4 col-8 mx-auto">
+    <section class="mx-auto">
+    <h1 class="mt-4">Super Simple Song Search</h1>
+
+    <!-- <div>
+                <select name="Instrument" id="instrument">
+                    <option selected disabled hidden>Select Instrument Tablature</option>
+                    <option>Instrument 1</option>
+                    <option>Instrument 2</option>
+                    <option>Instrument 3</option>
+                </select>
+            </div> -->
+    
     <div class="container">
         <!--Row for searching songs-->
         <div class="row">
@@ -38,17 +48,21 @@
                 <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
 
         </div>  
-        <ul class="list-group" id="results">
+        <ul class="list-group" id="results"></ul>
+        <container id="lyric-con"> </container>
+    </div>        
+</main>    
+</body>         
 
-        </ul>
-        <container id="lyric-con">
-
-        </container>
+       
     
           
-    </div>        
-</body>        
-</main>    
+    
+
+       
+
+
+
         <footer class="mt-5 p-3 text-center bg-light">
 			Super Song Search &copy 2022  Made with 🔥 by J. D. A.
 			<a href="" target="blank"> </a>
