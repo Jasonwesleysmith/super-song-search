@@ -35,43 +35,47 @@
         <div class="row">
             <!--Here we create an HTML form for handling the inputs-->
             <form class="col-sm-4 bg-light" id="search-form">
-                <h4 class="pt-1"><strong>Search a song:</strong></h4>
-                <!--Here we create the text box for capturing the search song Name-->
-                <div class="input-group mb-3">
-                    <input type="text" class="form-input" id="search-song" aria-label="song search" aria-describedby="search-button">
+                <div class="form-group mb-3">
+                    <input size="20" type="text" class="form-control mx-auto" id="search-song" placeholder="Search Inquiry Here..." aria-label="song search" aria-describedby="search-button">
                     <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button">Search<i class="fa fa-search"></i></button>
+                        <button class=" btn bg-primary text-light" id="search-button">Search  <i class="fa fa-search"></i></button>
                     </div>
                 </div>
-            </form>
+                </form>
                 <!--section for search song options-->
                 <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
 
         </div>  
         <ul class="list-group" id="results"></ul>
         <container id="lyric-con"> </container>
-    </div>        
+    </section>
 </main>    
-</body>         
 
-       
+
+<section>
+<div class="mx-auto" id="results">
+    <h1 class="text-center">Song Title and Lyrics</h1>
+</div>
+
+
+
+<div class="right" id="resultss">
+    <h1>Song Data Card</h1>
+</div>
+</section>      
+
+<footer>
+    Super Song Search &copy 2022  Made with 🔥 by J. D. A.
+    <a href="" target="blank"> </a>
     
-          
-    
+</footer>
 
-       
-
-
-
-        <footer class="mt-5 p-3 text-center bg-light">
-			Super Song Search &copy 2022  Made with 🔥 by J. D. A.
-			<a href="" target="blank"> </a>
-			
-        </footer>
+</body>
 
         <!--jQuery JS-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <!--Code to Jvascript File-->
         <script src="./assets/script.js"></script>
 
