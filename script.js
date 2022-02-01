@@ -3,6 +3,7 @@ var searchFormEl = $("#search-form");
 searchInputEl = $("#search-song");
 var lyricApi = "https://api.lyrics.ovh/";
 results = $("#results");
+resultss = $("#resultss");
 
 
 
@@ -84,7 +85,7 @@ function displayLyrics(song) {
    var lyricDisplay = '<h3 class="lyrics-title">' + song.display + '</h3>';
    lyricDisplay += '<div id="lyrics">' + data.lyrics.replace(/\n/g, '<br />').replace('Paroles de la chanson', '').replace(song.title_short + ' par ' + song.artist, '') + '</div>';
 
-   lyricsContainer.append(lyricDisplay);
+   results.append(lyricDisplay);
     })
 
 }
@@ -106,7 +107,7 @@ function displayMeta(data) {
         keyOf = meta.key_of;
 
         cardDisplay = '<div id="metadata"><p><em>BPM:</em>' + bpm + '</p><p><em>Time Signature:</em>' + timeSig + '</p><p><em>Key:</em>' + keyOf + '</p></div>';
-        lyricsContainer.append(cardDisplay);
+        resultss.append(cardDisplay);
     })
 }
 
