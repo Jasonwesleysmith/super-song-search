@@ -54,7 +54,7 @@ getSuggestions = function(searchTerm) {
                 });
             // display suggestions of search on the page
             selectorData.forEach(function(result) {
-                var displayResults = $('<li class="result">' + result.display + '</li>');
+                var displayResults = $('<button class="result">' + result.display + '</button>');
                 results.append(displayResults);
             // when option from suggestion is clicked displayLyrics function begins
                 displayResults.click(function() {
