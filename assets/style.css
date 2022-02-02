@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* general */
+=======
+* general */
+>>>>>>> api
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,7 +14,11 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   background-image: url(/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
+=======
+  background-image: url(./assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
+>>>>>>> api
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
