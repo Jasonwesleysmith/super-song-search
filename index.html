@@ -1,63 +1,85 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Super Song Search</title>
-    <!--Bootstrap CSS CDN-->
-    <link rel="stylesheet" href="" />
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/6933239a25.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="">
 
 </head>
-<main>
-    <header>
-    <!--Jumbotron for Title-->
+
+    <!-- <header>
+    Jumbotron for Title
     <div class="jumbotron container-fluid mt-2 text-center p-2">
         <h1> <strong>Super Song Search</strong></h1>
     </div>
-    </header>
-<body>    
-    <div class="container">
+    </header>  -->
+
+    <body>    
         <!--Row for searching songs-->
-        <div class="row">
-            <!--Here we create an HTML form for handling the inputs-->
-            <form class="col-sm-4 bg-light" id="search-form">
-                <h4 class="pt-1"><strong>Search a song:</strong></h4>
-                <!--Here we create the text box for capturing the search song Name-->
+   
+        <main class="row mt-4 col-8 mx-auto">
+            <section class="mx-auto">
+            <h1 class="mt-4">Super Simple Song Search</h1>
+            
+            <!-- <div>
+                <select name="Instrument" id="instrument">
+                    <option selected disabled hidden>Select Instrument Tablature</option>
+                    <option>Instrument 1</option>
+                    <option>Instrument 2</option>
+                    <option>Instrument 3</option>
+                </select>
+            </div> -->
+                <form class="mb-4" id="search-form">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-input" id="search-song" aria-label="song search" aria-describedby="search-button">
+                    <input size="20" type="text" class="form-input mx-auto" id="search-song" placeholder="Search Inquiry Here..." aria-label="song search" aria-describedby="search-button">
                     <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button">Search<i class="fa fa-search"></i></button>
+                        <button class=" btn bg-primary text-light" id="search-button">Search  <i class="fa fa-search"></i></button>
                     </div>
                 </div>
-            </form>
-                <!--section for search song options-->
-                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                </form>
 
-        </div>  
-        <ul class="list-group" id="results">
-
-        </ul>
-        <container id="lyric-con">
-
-        </container>
+                <!-- <form class="col-sm-4 bg-light" id="search-form">
+                    <div class="form-group mb-3">
+                        <input size="20" type="text" class="form-control mx-auto" id="search-song" placeholder="Search Inquiry Here..." aria-label="song search" aria-describedby="search-button">
+                        <div class="input-group-append">
+                            <button class=" btn bg-primary text-light" id="search-button">Search  <i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    </form> -->
+                    <!--section for search song options-->
+                    <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+            </section>
+        </main>    
+        
     
-          
-    </div>        
-</body>        
-</main>    
-        <footer class="mt-5 p-3 text-center bg-light">
+    <section>
+        <div class="mx-auto" id="results">
+            <h1 class="text-center">Song Title and Lyrics</h1>
+        </div>
+        <div class="right" id="resultss">
+            <h1>Song Data Card</h1>
+        </div>
+    </section>      
+
+        <footer>
 			Super Song Search &copy 2022  Made with 🔥 by J. D. A.
 			<a href="" target="blank"> </a>
 			
         </footer>
 
+        </body>         
+
         <!--jQuery JS-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <!--Code to Jvascript File-->
-        <script src="./script.js"></script>
+        <script src="assets/script.js"></script>
 
 </html>		

@@ -11,6 +11,7 @@ resultss = $("#resultss");
 // pass text input into getSuggestions and clear input
 searchFormEl.on("submit", function(event) {
     event.preventDefault();
+    console.log("why");
     // remove suggestions or lyrics
     $("#lyrics").remove();
     $('.lyrics-title').remove();

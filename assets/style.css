@@ -1,4 +1,4 @@
-/* general */
+* general */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -50,6 +50,16 @@ body {
   float: left;
   width: 30%;
   
+}
+
+.result {
+color: white;
+background-color: black;
+margin: 5px;
+padding: 5px;
+padding-left: 6px;
+padding-right: 6px;
+border-radius: 10px;
 }
 
 #results {
