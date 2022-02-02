@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 /* general */
+=======
+* general */
+>>>>>>> api
 * {
+<<<<<<< HEAD
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -68,29 +73,63 @@
     padding: 10px;
     margin-top: 50px;
   }
-  
-  h1 {
-    font-family: sans-serif;
-    color: #999;
-    font-size: 50px;
-  }
+=======
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  h4 {
-    font-family: sans-serif;
-    color: #999;
-    font-size: 48px;
-  }
+html {
+  height: 100%;
+}
 
-  /* head */
-  .header {
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-  }
+body {
+<<<<<<< HEAD
+  background-image: url(/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
+=======
+  background-image: url(./assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
+>>>>>>> api
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+}
+
+.row {
+  border: 1.5px solid white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#instrument {
+  margin: 30px;
+  width: 700px;
+  height: 50px;
+  border-radius: 10px;
+  float: left;
   
-  .title:hover {
-    cursor: pointer;
-  }
+}
+
+#search-song {
+  margin: 30px;
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+>>>>>>> develop2
   
+  
+}
+
+/* .left {
+  float: left;
+} */
+
+.right {
+  float: left;
+  width: 30%;
+  
+<<<<<<< HEAD
   /* main */
   main {
     display: inline-block;
@@ -99,15 +138,81 @@
   }
 
   /* footer */
-footer {
-    background-color: rgb(61, 61, 61);
-    padding: 20px;
-    text-align: center;
-    margin-top: 580px;
-    color: white;
-  }
+=======
+}
 
-  .container {
-    display: flex;
-    align-items: center;
-  }
+.result {
+color: white;
+background-color: black;
+margin: 5px;
+padding: 5px;
+padding-left: 6px;
+padding-right: 6px;
+border-radius: 10px;
+}
+
+#results {
+  border: 1.5px solid white;
+  border-radius: 10px;
+  height: 450px;
+  padding: 10px;
+  margin-top: 50px;
+  width: 68%;
+  float: right;
+}
+
+#resultss {
+  border: 1.5px solid white;
+  border-radius: 10px;
+  height: 350px;
+  padding: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: #999;
+  font-size: 50px;
+}
+
+h4 {
+  font-family: sans-serif;
+  color: #999;
+  font-size: 48px;
+}
+
+/* head */
+.header {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+/* main */
+main {
+  display: inline-block;
+  background-color: var(--pink);
+  color: #fff;
+  width: 100%;
+}
+
+/* footer */
+>>>>>>> develop2
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(61, 61, 61);
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
