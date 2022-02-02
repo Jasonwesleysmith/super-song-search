@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-/* general */
-=======
-* general */
->>>>>>> api
+/* general */ 
 * {
-<<<<<<< HEAD
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -57,38 +52,12 @@
     
   }
 
-  #results {
-    border: 1.5px solid white;
-    border-radius: 10px;
-    height: 530px;
-    padding: 10px;
-    margin-top: 50px;
-    width: 38%;
-  }
-
-  #resultss {
-    border: 1.5px solid white;
-    border-radius: 10px;
-    height: 530px;
-    padding: 10px;
-    margin-top: 50px;
-  }
-=======
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html {
   height: 100%;
 }
 
 body {
-<<<<<<< HEAD
-  background-image: url(/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
-=======
-  background-image: url(./assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
->>>>>>> api
+  background-image: url("/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg");
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
@@ -107,8 +76,7 @@ body {
   width: 700px;
   height: 50px;
   border-radius: 10px;
-  float: left;
-  
+  float: left; 
 }
 
 #search-song {
@@ -116,9 +84,6 @@ body {
   width: 90%;
   height: 50px;
   border-radius: 10px;
->>>>>>> develop2
-  
-  
 }
 
 /* .left {
@@ -129,16 +94,6 @@ body {
   float: left;
   width: 30%;
   
-<<<<<<< HEAD
-  /* main */
-  main {
-    display: inline-block;
-    color: #fff;
-    width: 100%;
-  }
-
-  /* footer */
-=======
 }
 
 .result {
@@ -154,17 +109,18 @@ border-radius: 10px;
 #results {
   border: 1.5px solid white;
   border-radius: 10px;
-  height: 450px;
   padding: 10px;
+  padding-left: 5%;
   margin-top: 50px;
   width: 68%;
   float: right;
+  min-height: 450px;
 }
 
 #resultss {
   border: 1.5px solid white;
   border-radius: 10px;
-  height: 350px;
+  min-height: 350px;
   padding: 10px;
   margin-top: 50px;
   text-align: center;
@@ -201,7 +157,6 @@ main {
 }
 
 /* footer */
->>>>>>> develop2
 footer {
   position: fixed;
   bottom: 0;
@@ -215,4 +170,16 @@ footer {
 .container {
   display: flex;
   align-items: center;
+}
+
+#lyrics {
+  font-family: sans-serif;
+  color: #999;
+  font-size: 20px;
+}
+
+#metadata {
+  font-family: sans-serif;
+  color: #999;
+  font-size: 35px;
 }
