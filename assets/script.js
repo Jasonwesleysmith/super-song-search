@@ -106,7 +106,7 @@ function displayMeta(data) {
         timeSig = meta.time_sig;
         keyOf = meta.key_of;
 
-        cardDisplay = '<div id="metadata"><p><em>BPM:</em>' + bpm + '</p><p><em>Time Signature:</em>' + timeSig + '</p><p><em>Key:</em>' + keyOf + '</p></div>';
+        cardDisplay = '<div id="metadata"><p><em>BPM: </em>' + bpm + '</p><p><em>TS: </em>' + timeSig + '</p><p><em>Key: </em>' + keyOf + '</p></div>';
         resultss.append(cardDisplay);
     })
 }
