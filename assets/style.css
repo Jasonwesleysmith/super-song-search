@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-image: url(/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
+  background-image: url(./assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
