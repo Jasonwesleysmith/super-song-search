@@ -13,8 +13,9 @@ searchFormEl.on("submit", function(event) {
     event.preventDefault();
     // remove suggestions or lyrics
     $("#lyrics").remove();
-    $('.lyrics-title').remove();
+    $('.results-header').remove();
     $(".result").remove();
+    $("#metadata").remove();
     term = searchInputEl.val().trim();
     // run getSuggestions and delete input value
     if (term) {
@@ -54,12 +55,19 @@ getSuggestions = function(searchTerm) {
                     title: result.title_short
                 });
                 });
+//TODO: MOVE OPTIONS TO LOCALSTORAGE
+                $(".results-header").remove();
+                optionsHeader = $('<h2 class="text-center results-header">Options</h2>');
+                results.append(optionsHeader);
             // display suggestions of search on the page
             selectorData.forEach(function(result) {
-                var displayResults = $('<button class="result">' + result.display + '</button>');
+                
+                var displayResults = $('<button id="option" class="btn result">' + result.display + '</button><br class="result"/>');
+                results.append
                 results.append(displayResults);
             // when option from suggestion is clicked displayLyrics function begins
                 displayResults.click(function() {
+
                     displayLyrics(result);
                     displayMeta(result);
                     return;
@@ -75,29 +83,38 @@ getSuggestions = function(searchTerm) {
 
 function displayLyrics(song) {
     // remove 
+    $(".results-header").remove();
    $(".result").remove();
    // form Api url for song
    console.log(song);
-    $.getJSON(lyricApi + "v1/" + (song.artist).replace(/' '/g, '%20') + "/" + (song.title).replace(/' '/g, '%20'), function(data) {
+   lyricsApi = lyricApi + "v1/" + (song.artist).replace(/' '/g, '%20') + "/" + (song.title).replace(/' '/g, '%20');
+
+    $.getJSON(lyricsApi).fail(function(error) {
+        errorDisplay = "<h2 class='results-header'>Sorry, but we're having trouble getting the information for that song. Please try another. </h2>"
+        results.append(errorDisplay);
+        return;
+    }).then(function(data) {
         //console.log(data.lyrics);
-    // create html elements to append to page and append
+
+         // create html elements to append to page and append
    
-   var lyricDisplay = '<h3 class="lyrics-title">' + song.display + '</h3>';
-   lyricDisplay += '<div id="lyrics">' + data.lyrics.replace(/\n/g, '<br />').replace('Paroles de la chanson', '').replace(song.title_short + ' par ' + song.artist, '') + '</div>';
+   var lyricDisplay = '<h2 class="results-header">' + song.display + '</h2>';
+   lyricDisplay += '<div id="lyrics">' + data.lyrics.replace(/\n/g, '<br />').replace('Paroles de la chanson', '').replace(song.title + ' par ' + song.artist, '') + '</div>';
 
    results.append(lyricDisplay);
-    })
 
+    })
 }
+    
+
 
 function displayMeta(data) {
+    $("#metadata").remove();
     //prep apiUrl and format song terms to fit url
     artistParsed = (data.artist.replace(/\s/g, '+')).toLowerCase();
     titleParsed = (data.title.replace(/\s/g, '+')).toLowerCase();
     apiURL = "https://api.getsongbpm.com/search/?api_key=4b52f9441e5448b15c564ac30bda81a3&type=both&lookup=song:" + titleParsed + "%20artist:" + artistParsed;
 
-    console.log(artistParsed);
-    console.log(titleParsed);
 
     fetch(apiURL).then(result => result.json()).then(data => {
         return data.search[0];
@@ -106,11 +123,17 @@ function displayMeta(data) {
         timeSig = meta.time_sig;
         keyOf = meta.key_of;
 
-        cardDisplay = '<div id="metadata"><p><em>BPM: </em>' + bpm + '</p><p><em>TS: </em>' + timeSig + '</p><p><em>Key: </em>' + keyOf + '</p></div>';
+        cardDisplay = '<br/><div id="metadata"><p><b>BPM: </b>' + bpm + '</p><p><b>Time Signature: </b>' + timeSig + '</p><p><b>Key: </b>' + keyOf + '</p></div>';
         resultss.append(cardDisplay);
+    }).catch(function() {
+        noSongData = "<h2 class='results-header'>There is no song data available for this song. </h2>"
+        resultss.append(noSongData);
+        return;
     })
 }
 
 
 
-   
+//TODO: LOCALSTORAGE FUNCTION
+
+//TODO: GETLOCALSTORAGE FUNCTION
