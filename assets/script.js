@@ -73,7 +73,6 @@ getSuggestions = function(searchTerm) {
                     displayMeta(result);
                     return;
                 });
-                //console.log(displayResults);
             })
             
 
@@ -87,7 +86,6 @@ function displayLyrics(song) {
     $(".results-header").remove();
    $(".result").remove();
    // form Api url for song
-   console.log(song);
    lyricsApi = lyricApi + "v1/" + (song.artist).replace(/' '/g, '%20') + "/" + (song.title).replace(/' '/g, '%20');
     
     //pull api data for lyrics to display and then append
@@ -96,12 +94,7 @@ function displayLyrics(song) {
         results.append(errorDisplay);
         return;
     }).then(function(data) {
-        console.log(data);
     //Add button to save to setlist
-
-
-
-
    var lyricDisplay = '<h2 class="results-header">' + song.display + '</h2>';
    lyricDisplay += '<button class="btn" id="save-setlist">Save to Setlist</button>'
    lyricDisplay += '<div id="lyrics">' + data.lyrics.replace(/\n/g, '<br />').replace('Paroles de la chanson', '').replace(song.title + ' par ' + song.artist, '') + '</div>';
@@ -157,31 +150,49 @@ setLocalStorage = function(item) {
 }
 
 //TODO: GETLOCALSTORAGE FUNCTION
-getLocalStorage = function() {
-    setlistHeader = $("<h2 class='results-header'>Setlist </h2>") 
-    results.append(setlistHeader);
-    var values = [],
-        keys = localStorage.getItem("setlistOrder");
-        keys = JSON.parse(keys);
-        i = keys.length;
 
-    while ( i-- ) {
-        values.push(JSON.parse(localStorage.getItem(keys[i])));
-    }
 
-    values.forEach(function(result) {
-              
-        displayResults = $('<button id="option" class="btn result">' + result.display + '</button><br class="result"/>');
-        results.append
-        results.append(displayResults);
-    // when option from suggestion is clicked displayLyrics function begins
-        displayResults.click(function() {
-
-            displayLyrics(result);
-            displayMeta(result);
-            return;
+    getLocalStorage = function() {
+        $(".result").remove();
+        $(".results-header").remove();
+        setlistHeader = $("<h2 class='results-header'>Setlist </h2>") 
+        results.append(setlistHeader);
+        var values = [],
+            keys = localStorage.getItem("setlistOrder");
+            keys = JSON.parse(keys);
+            i = keys.length;
+    
+        while ( i-- ) {
+            values.push(JSON.parse(localStorage.getItem(keys[i])));
+        }
+    
+        values.forEach(function(result) {
+                  
+            displayResults = $('<button id="option" class="btn result">' + result.display + '</button>');
+            displayDelete = $('<button id="setlist-delete" class="btn result">Remove</button><br class="result"/>')
+            results.append(displayResults);
+            results.append(displayDelete);
+        // when option from suggestion is clicked displayLyrics function begins
+            displayResults.click(function() {
+                console.log(result);
+                displayLyrics(result);
+                displayMeta(result);
+                return;
+            });
+            displayDelete.click(function() {
+                localStorage.removeItem(result.display);
+                keyDelete = localStorage.getItem("setlistOrder");
+                keyDelete = JSON.parse(keyDelete);
+                i = keyDelete.indexOf(result.display)
+                console.log(keyDelete);
+                keyDelete.splice(i, 1);
+                console.log(keyDelete);
+                console.log(i);
+                localStorage["setlistOrder"] = JSON.stringify(keyDelete);
+                getLocalStorage();
+                return;
+            })
         });
-})
     }
 
     getLocalStorage();
