@@ -16,6 +16,7 @@ searchFormEl.on("submit", function(event) {
     $('.results-header').remove();
     $(".result").remove();
     $("#metadata").remove();
+    $("#save-setlist").remove();
     term = searchInputEl.val().trim();
     // run getSuggestions and delete input value
     if (term) {
@@ -88,20 +89,25 @@ function displayLyrics(song) {
    // form Api url for song
    console.log(song);
    lyricsApi = lyricApi + "v1/" + (song.artist).replace(/' '/g, '%20') + "/" + (song.title).replace(/' '/g, '%20');
-
-    $.getJSON(lyricsApi).fail(function(error) {
+    
+    //pull api data for lyrics to display and then append
+    $.getJSON(lyricsApi).fail(function() {
         errorDisplay = "<h2 class='results-header'>Sorry, but we're having trouble getting the information for that song. Please try another. </h2>"
         results.append(errorDisplay);
         return;
     }).then(function(data) {
-        //console.log(data.lyrics);
+        console.log(data);
+    //Add button to save to setlist
 
-         // create html elements to append to page and append
-   
+
+
+
    var lyricDisplay = '<h2 class="results-header">' + song.display + '</h2>';
+   lyricDisplay += '<button class="btn" id="save-setlist">Save to Setlist</button>'
    lyricDisplay += '<div id="lyrics">' + data.lyrics.replace(/\n/g, '<br />').replace('Paroles de la chanson', '').replace(song.title + ' par ' + song.artist, '') + '</div>';
 
    results.append(lyricDisplay);
+   setLocalStorage(song);
 
     })
 }
@@ -134,6 +140,48 @@ function displayMeta(data) {
 
 
 
-//TODO: LOCALSTORAGE FUNCTION
+// stores song data when save-setlist button is clicked
+setLocalStorage = function(item) {
+    setlistSave = $("#save-setlist")
+    setlistSave.click(function() {
+    setlistAdd = JSON.stringify(item);
+    setlistOrder =  [];
+    if (localStorage["setlistOrder"]) {
+        setlistOrder = JSON.parse(localStorage["setlistOrder"]);
+    }
+    setlistOrder.unshift(item.display);
+    localStorage["setlistOrder"] = JSON.stringify(setlistOrder);
+    localStorage.setItem(item.display, setlistAdd);
+    })
+
+}
 
 //TODO: GETLOCALSTORAGE FUNCTION
+getLocalStorage = function() {
+    setlistHeader = $("<h2 class='results-header'>Setlist </h2>") 
+    results.append(setlistHeader);
+    var values = [],
+        keys = localStorage.getItem("setlistOrder");
+        keys = JSON.parse(keys);
+        i = keys.length;
+
+    while ( i-- ) {
+        values.push(JSON.parse(localStorage.getItem(keys[i])));
+    }
+
+    values.forEach(function(result) {
+              
+        displayResults = $('<button id="option" class="btn result">' + result.display + '</button><br class="result"/>');
+        results.append
+        results.append(displayResults);
+    // when option from suggestion is clicked displayLyrics function begins
+        displayResults.click(function() {
+
+            displayLyrics(result);
+            displayMeta(result);
+            return;
+        });
+})
+    }
+
+    getLocalStorage();
