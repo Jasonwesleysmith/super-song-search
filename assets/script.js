@@ -164,8 +164,15 @@ setLocalStorage = function(item) {
         var values = [],
             keys = localStorage.getItem("setlistOrder");
             keys = JSON.parse(keys);
+            
+        if (!keys) {
+            noSetlist = $("<h3 class='result'>It looks like you don't have a setlist created yet. Seaarch some songs to add them in!</h3>")
+            results.append(noSetlist);
+            return;
+
+        }
+        else {
             i = keys.length;
-    
         while ( i-- ) {
             values.push(JSON.parse(localStorage.getItem(keys[i])));
         }
@@ -197,6 +204,7 @@ setLocalStorage = function(item) {
                 return;
             })
         });
+    }
     }
 
     setlistRefresh.click(function() {
