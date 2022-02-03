@@ -4,6 +4,7 @@ searchInputEl = $("#search-song");
 var lyricApi = "https://api.lyrics.ovh/";
 results = $("#results");
 resultss = $("#resultss");
+setlistRefresh = $("#clear-history");
 
 
 
@@ -153,8 +154,11 @@ setLocalStorage = function(item) {
 
 
     getLocalStorage = function() {
+        $("#lyrics").remove();
+        $('.results-header').remove();
         $(".result").remove();
-        $(".results-header").remove();
+        $("#metadata").remove();
+        $("#save-setlist").remove();
         setlistHeader = $("<h2 class='results-header'>Setlist </h2>") 
         results.append(setlistHeader);
         var values = [],
@@ -195,4 +199,9 @@ setLocalStorage = function(item) {
         });
     }
 
+    setlistRefresh.click(function() {
+        getLocalStorage();
+    });
+
     getLocalStorage();
+
