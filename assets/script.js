@@ -64,7 +64,7 @@ getSuggestions = function(searchTerm) {
             // display suggestions of search on the page
             selectorData.forEach(function(result) {
                 
-                var displayResults = $('<button id="option" class="btn result">' + result.display + '</button><br class="result"/>');
+                var displayResults = $('<button id="option" class="btn result ">' + result.display + '</button><br class="result"/>');
                 results.append
                 results.append(displayResults);
             // when option from suggestion is clicked displayLyrics function begins
@@ -213,3 +213,9 @@ setLocalStorage = function(item) {
 
     getLocalStorage();
 
+
+    // var btnEl = document.createElement("button") element created
+    // console.log(btnEl)
+    // btnEl.textContent= "click here" text added
+    // btnEl.classlist.add("Styling") Class added
+    // body.append(btnEl) attaching to page
