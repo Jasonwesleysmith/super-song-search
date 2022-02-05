@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 /* general */ 
-=======
-<<<<<<< HEAD
-/* general */
-=======
-* general */
->>>>>>> api
->>>>>>> 72ccc9101937d91f1d3c14ba8515961f66815a54
 * {
   box-sizing: border-box;
   margin-top: 1%;
 }
 
 body {
-<<<<<<< HEAD
 background-image: url("/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg");
 background-size: cover;
 background-repeat:repeat;
@@ -21,19 +12,6 @@ background-color: #000;
 background-position: center;
 height: 100%;
 }  
-=======
-<<<<<<< HEAD
-  background-image: url(/assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
-=======
-  background-image: url(./assets/images/joyce-g-ITVCF_F1_00-unsplash.jpg);
->>>>>>> api
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center;
-  background-color: rgb(0, 0, 0);
-  height: 100%;
-}
->>>>>>> 72ccc9101937d91f1d3c14ba8515961f66815a54
 
 .container {
   border: 3px solid white;
