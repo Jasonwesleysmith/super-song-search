@@ -59,12 +59,12 @@ getSuggestions = function(searchTerm) {
                 });
 //TODO: MOVE OPTIONS TO LOCALSTORAGE
                 $(".results-header").remove();
-                optionsHeader = $('<h2 class="text-center results-header">Options</h2>');
+                optionsHeader = $('<h2 class="text-center results-header btn-result">Options</h2>');
                 results.append(optionsHeader);
             // display suggestions of search on the page
             selectorData.forEach(function(result) {
                 
-                var displayResults = $('<button id="option" class="btn result ">' + result.display + '</button><br class="result"/>');
+                var displayResults = $('<button id="option" class="btn result">' + result.display + '</button><br class="result"/>');
                 results.append
                 results.append(displayResults);
             // when option from suggestion is clicked displayLyrics function begins
@@ -123,7 +123,7 @@ function displayMeta(data) {
         timeSig = meta.time_sig;
         keyOf = meta.key_of;
 
-        cardDisplay = '<br/><div id="metadata"><p><b>BPM: </b>' + bpm + '</p><p><b>Time Signature: </b>' + timeSig + '</p><p><b>Key: </b>' + keyOf + '</p></div>';
+        cardDisplay = '<br/><div id="metadata"><p><b>BPM: </b>' + bpm + '</p><p><b>Time Sig: </b>' + timeSig + '</p><p><b>Key: </b>' + keyOf + '</p></div>';
         resultss.append(cardDisplay);
     }).catch(function() {
         noSongData = "<h2 class='results-header'>There is no song data available for this song. </h2>"
@@ -166,7 +166,7 @@ setLocalStorage = function(item) {
             keys = JSON.parse(keys);
             
         if (!keys) {
-            noSetlist = $("<h3 class='result'>It looks like you don't have a setlist created yet. Seaarch some songs to add them in!</h3>")
+            noSetlist = $("<h3 class='result'>It looks like you don't have a setlist created yet. Search some songs to add them in!</h3>")
             results.append(noSetlist);
             return;
 
@@ -179,7 +179,7 @@ setLocalStorage = function(item) {
     
         values.forEach(function(result) {
                   
-            displayResults = $('<button id="option" class="btn result">' + result.display + '</button>');
+            displayResults = $('<button id="option" class="btn-result">' + result.display + '</button>');
             displayDelete = $('<button id="setlist-delete" class="btn result">Remove</button><br class="result"/>')
             results.append(displayResults);
             results.append(displayDelete);
