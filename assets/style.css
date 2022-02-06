@@ -11,12 +11,19 @@ html {
 h1 {
   font-family: sans-serif;
   color: #999;
-  font-size: 50px;
+  margin-top: 10px;
+  font-size: 60px;
   font-weight: bold;
+  text-align: center;
 }
 
 h2 {
-  color:white;
+  font-family: sans-serif;
+  font-size: 28px;
+  background-color: #999;
+  margin: 0px 0px 20px 0px;
+  height: 30%;
+  border-radius: 8px;
 }
 
 body {
@@ -28,26 +35,17 @@ body {
   height: 100%;
 }
 
-#search-form {
+#hero {
   border: 3px solid white;
   border-radius: 10px;
   text-align: center;
 }
 
-#search-button {
+.btn {
   font-family: sans-serif;
   font-size: 30px;
   background-color: #999;
   margin: 0px 0px 15px 0px;
-  height: 30%;
-  border-radius: 8px;
-}
-
-.btn-result {
-  font-family: sans-serif;
-  font-size: 28px;
-  background-color: #999;
-  margin: 0px 0px 20px 0px;
   height: 30%;
   border-radius: 8px;
 }
@@ -105,7 +103,7 @@ justify-content: center;
 text-align: center;
 }
 
-#resultss {
+#song-data {
   border: 3px solid white;
   border-radius: 10px;
   min-height: 900px;

@@ -3,7 +3,7 @@ var searchFormEl = $("#search-form");
 searchInputEl = $("#search-song");
 var lyricApi = "https://api.lyrics.ovh/";
 results = $("#results");
-resultss = $("#resultss");
+songData = $("#song-data");
 setlistRefresh = $("#clear-history");
 
 
@@ -124,10 +124,10 @@ function displayMeta(data) {
         keyOf = meta.key_of;
 
         cardDisplay = '<br/><div id="metadata"><p><b>BPM: </b>' + bpm + '</p><p><b>Time Sig: </b>' + timeSig + '</p><p><b>Key: </b>' + keyOf + '</p></div>';
-        resultss.append(cardDisplay);
+        songData.append(cardDisplay);
     }).catch(function() {
         noSongData = "<h2 class='results-header'>There is no song data available for this song. </h2>"
-        resultss.append(noSongData);
+        songData.append(noSongData);
         return;
     })
 }
