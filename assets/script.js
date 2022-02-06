@@ -212,10 +212,3 @@ setLocalStorage = function(item) {
     });
 
     getLocalStorage();
-
-
-    // var btnEl = document.createElement("button") element created
-    // console.log(btnEl)
-    // btnEl.textContent= "click here" text added
-    // btnEl.classlist.add("Styling") Class added
-    // body.append(btnEl) attaching to page

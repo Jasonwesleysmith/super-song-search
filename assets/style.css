@@ -7,7 +7,7 @@
 html {
   height: 100%;
 }
-
+/* html element styling */
 h1 {
   font-family: sans-serif;
   color: #999;
@@ -35,13 +35,34 @@ body {
   height: 100%;
 }
 
+main {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  margin:auto;
+  
+}
+
 section {
-  margin: 10px;
+  margin: 8px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(61, 61, 61);
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
 #hero {
   border: 5px solid white;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
 }
 
@@ -52,7 +73,7 @@ section {
   margin: 0px 0px 15px 0px;
   height: 30%;
   border-radius: 8px;
-} */
+}
 
 ::placeholder {
   font-size: 20px;
@@ -83,33 +104,31 @@ section {
   float: left;
   width: 30%;
   
-}
+} 
 
 .result {
 color: white;
 background-color: black;
 margin: 5px;
 padding: 5px;
-border-radius: 10px;
+border-radius: 15px;
 justify-content: center;
 }
 
 #results {
   border: 5px solid white;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px;
-
   margin-top: 50px;
   width: 59%;
   float: right;
   min-height: 900px;
-
-text-align: center;
+  text-align: center;
 }
 
 #song-data {
   border: 5px solid white;
-  border-radius: 10px;
+  border-radius: 15px;
   min-height: 900px;
   padding: 10px;
   margin-top: 50px;
@@ -117,45 +136,12 @@ text-align: center;
   text-align: center;
 }
 
-/* head */
-.header {
-  background-color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-.title:hover {
+/* cursor styling */
+body, title, .btn:hover {
   cursor: pointer;
 }
 
-/* main */
-main {
-  display: inline-block;
-  color: #fff;
-  width: 100%;
-  margin:auto;
-  
-}
-
-/* footer */
-footer {
-  position: sticky;
-  bottom: 0px;
-
-  width: 100%;
-  background-color: rgb(61, 61, 61);
-  padding: 15px;
-  font-family: sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-}
-
+/* returned lyrics and data styling */
 #lyrics {
   font-family: sans-serif;
   color: rgb(237, 234, 234);
