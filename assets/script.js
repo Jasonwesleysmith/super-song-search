@@ -179,7 +179,7 @@ setLocalStorage = function(item) {
     
         values.forEach(function(result) {
                   
-            displayResults = $('<button id="option" class="btn-result">' + result.display + '</button>');
+            displayResults = $('<button id="option" class="btn result">' + result.display + '</button>');
             displayDelete = $('<button id="setlist-delete" class="btn result">Remove</button><br class="result"/>')
             results.append(displayResults);
             results.append(displayDelete);
