@@ -16,11 +16,9 @@
 ### WHEN I select a song
 ### THEN I am presented with a side by side view of lyrics and song data
 
-API:s 
-lyrics.ovh API, GetSongBPM API
+# APIs utilized: lyrics.ovh API, GetSongBPM API
 
-## Wireframe
-Wireframe mock up of application
+## Wireframe mock up of application
 ![Wireframe Screenshot](./assets/images/super-song-search.png)
 
 Deployed link: https://jasonwesleysmith.github.io/super-song-search/
