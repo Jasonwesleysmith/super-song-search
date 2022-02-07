@@ -16,6 +16,8 @@
 ### WHEN I select a song
 ### THEN I am presented with a side by side view of lyrics and song data
 
+# TECHNOLOGIES utilized: HTML, CSS, JavaScript, JQuery, Bootstrap
+
 # APIs utilized: lyrics.ovh API, GetSongBPM API
 
 ## Wireframe mock up of application
