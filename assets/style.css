@@ -27,7 +27,7 @@ h2 {
 }
 
 body {
-  background-image: url("/images/joyce-g-ITVCF_F1_00-unsplash.jpg");
+  background-image: url("images/joyce-g-ITVCF_F1_00-unsplash.jpg");
   background-size: cover;
   background-repeat:repeat;
   background-color: #000;
