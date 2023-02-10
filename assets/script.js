@@ -1,7 +1,7 @@
 var lyricsContainer = $("#lyric-con");
 var searchFormEl = $("#search-form");
 searchInputEl = $("#search-song");
-var lyricApi = "https://api.lyrics.ovh/";
+var lyricApi = "https://api.lyrics.ovh";
 results = $("#results");
 songData = $("#song-data");
 setlistRefresh = $("#clear-history");
